@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-6">
+            <h2>Student Registration Form</h2>
+        </div>
+        <div class="col-sm-5"></div>
+    </div>
+</div>
+
+<form [formGroup]="studentProfileForm" (ngSubmit)="onSubmit()">
+
+    <!-----------------------FIRST NAME-------------------->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <label for="firstName"> First Name * </label>
+            </div>
+
+            <div class="col-sm-1"> </div>
+
+            <div class="col-sm-2">
+                <input type="text" id="firstName" formControlName="firstName" />
+            </div>
+            <div class="col-sm-5"></div>
+        </div>
+
+        <!-----------------------LAST NAME-------------------->
+        <br>
+        <div class="row">
+
+            <div class="col-sm-1">
+            </div>
+
+            <div class="col-sm-3">
+                <label for="lastName"> Last Name *</label>
+            </div>
+
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-2">
+                <input type="text" id="lasttName" formControlName="lastName" />
+            </div>
+            <div class="col-sm-5"></div>
+        </div>
+        <!--Last Name Ends -->
+        <br>
+        <div class="row">
+
+            <div class="col-sm-5"></div>
+
+            <div class="col-sm-2">
+                <button type="submit" [disabled]="!studentProfileForm.valid">Submit</button>
+            </div>
+            <div class="col-sm-5"></div>
+        </div>
+    </div>
+</form>
